@@ -3,7 +3,7 @@ package ru.aston.lurie_pa.task1;
 import java.math.BigDecimal;
 
 public abstract class HaircutOrder implements Discount{
-    private BigDecimal discount;
+    private BigDecimal multiplyingFactor;
     private BigDecimal price;
     private User user;
     private int id;
@@ -11,21 +11,20 @@ public abstract class HaircutOrder implements Discount{
     public HaircutOrder() {
     }
 
-    public HaircutOrder(BigDecimal discount, BigDecimal price, User user, int id) {
-        this.discount = discount;
+    public HaircutOrder(BigDecimal multiplyingFactor, BigDecimal price, User user, int id) {
+        this.multiplyingFactor = multiplyingFactor;
         this.price = price;
         this.user = user;
         this.id = id;
     }
 
-
-
-    public BigDecimal getDiscount() {
-        return discount;
+    @Override
+    public BigDecimal getMultiplyingFactor() {
+        return multiplyingFactor;
     }
 
-    public void setDiscount(BigDecimal discount) {
-        this.discount = discount;
+    public void setMultiplyingFactor(BigDecimal multiplyingFactor) {
+        this.multiplyingFactor = multiplyingFactor;
     }
 
     public BigDecimal getPrice() {
@@ -52,10 +51,6 @@ public abstract class HaircutOrder implements Discount{
         this.id = id;
     }
 
-    @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
     public BigDecimal getHaircutPrice(){
         return null;
     }
