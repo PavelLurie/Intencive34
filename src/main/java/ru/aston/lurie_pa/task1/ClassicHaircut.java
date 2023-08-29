@@ -2,8 +2,7 @@ package ru.aston.lurie_pa.task1;
 
 import java.math.BigDecimal;
 
-public class HaircutBooking extends HaircutOrder {
-
+public class ClassicHaircut extends HaircutOrder{
     @Override
     public BigDecimal getPrice(){
         return super.getPrice();

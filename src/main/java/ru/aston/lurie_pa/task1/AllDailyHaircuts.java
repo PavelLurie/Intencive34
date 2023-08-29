@@ -4,13 +4,11 @@ import com.sun.tools.javac.util.List;
 
 import java.math.BigDecimal;
 
-
-//повесить тест
-public class DailyOrderList implements OrderCalculation{
+public class AllDailyHaircuts implements OrderCalculation{
     private final BigDecimal INIT_SUMM;
     private List<HaircutOrder> orderList;
 
-    public DailyOrderList(BigDecimal initSumm, List<HaircutOrder> orderList) {
+    public AllDailyHaircuts(BigDecimal initSumm, List<HaircutOrder> orderList) {
         INIT_SUMM = initSumm;
         this.orderList = orderList;
     }

@@ -56,7 +56,7 @@ public abstract class HaircutOrder implements Discount{
     public int hashCode() {
         return super.hashCode();
     }
-    public BigDecimal getHairCutPrice(){
+    public BigDecimal getHaircutPrice(){
         return null;
     }
 }
