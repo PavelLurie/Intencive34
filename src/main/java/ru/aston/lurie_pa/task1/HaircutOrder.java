@@ -2,7 +2,7 @@ package ru.aston.lurie_pa.task1;
 
 import java.math.BigDecimal;
 
-public abstract class HaircutOrder implements Discount{
+public abstract class HaircutOrder implements MultiplyingFactor {
     private BigDecimal multiplyingFactor;
     private BigDecimal price;
     private User user;
@@ -28,7 +28,7 @@ public abstract class HaircutOrder implements Discount{
     }
 
     public BigDecimal getPrice() {
-        return price;
+        return getPrice().multiply(getMultiplyingFactor());
     }
 
     public void setPrice(BigDecimal price) {

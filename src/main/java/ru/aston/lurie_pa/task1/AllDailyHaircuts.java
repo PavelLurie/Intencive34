@@ -19,11 +19,21 @@ public class AllDailyHaircuts implements OrderCalculation{
         return null;
     }
 
+
+
     @Override
     public String toString() {
         return "DailyOrderList{" +
                 "INIT_SUMM=" + INIT_SUMM +
                 ", orderList=" + orderList +
                 '}';
+    }
+
+    public static void main(String[] args) {
+        User user = new User(25, "Smith", "Mike");
+        HaircutOrder haircutOrder = new ClassicHaircut(BigDecimal.valueOf(1.4), BigDecimal.valueOf(1500), user, 2, BigDecimal.valueOf(0.2));
+        ArrayList<HaircutOrder> tempList = new ArrayList<>();
+        //AllDailyHaircuts allDailyHaircuts = new AllDailyHaircuts();
+
     }
 }
