@@ -1,9 +1,6 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import ru.aston.lurie_pa.task1.AllDailyHaircuts;
-import ru.aston.lurie_pa.task1.ClassicHaircut;
-import ru.aston.lurie_pa.task1.HaircutOrder;
-import ru.aston.lurie_pa.task1.User;
+import ru.aston.lurie_pa.task1.*;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -17,7 +14,7 @@ public class AllDailyHairCutsTest {
         User user1 = new User(23, "Doe", "John");
 
         HaircutOrder haircutOrder = new ClassicHaircut(BigDecimal.valueOf(1.5), BigDecimal.valueOf(1500), user, 1, BigDecimal.valueOf(0.2));
-        HaircutOrder haircutOrder1 = new ClassicHaircut(BigDecimal.valueOf(1.5), BigDecimal.valueOf(1500), user1, 2, BigDecimal.valueOf(0.7));
+        HaircutOrder haircutOrder1 = new SportHaircut(BigDecimal.valueOf(1.5), BigDecimal.valueOf(1500), user1, 2, BigDecimal.valueOf(0.7));
         List<HaircutOrder> list = new ArrayList<>();
         list.add(haircutOrder);
         list.add(haircutOrder1);
@@ -33,7 +30,7 @@ public class AllDailyHairCutsTest {
         User user1 = new User(23, "Doe", "John");
 
         HaircutOrder haircutOrder = new ClassicHaircut(BigDecimal.valueOf(1.5), BigDecimal.valueOf(1500), user, 1, BigDecimal.valueOf(0.2));
-        HaircutOrder haircutOrder1 = new ClassicHaircut(BigDecimal.valueOf(1.5), BigDecimal.valueOf(1500), user1, 2, BigDecimal.valueOf(0.7));
+        HaircutOrder haircutOrder1 = new SportHaircut(BigDecimal.valueOf(1.5), BigDecimal.valueOf(1500), user1, 2, BigDecimal.valueOf(0.7));
         List<HaircutOrder> list = new ArrayList<>();
         list.add(haircutOrder);
         list.add(haircutOrder1);
