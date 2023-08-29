@@ -1,39 +1,38 @@
 package ru.aston.lurie_pa.task1;
 
-import com.sun.tools.javac.util.List;
+
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class AllDailyHaircuts implements OrderCalculation{
-    private final BigDecimal INIT_SUMM;
+    private BigDecimal resultSum;
     private List<HaircutOrder> orderList;
 
-    public AllDailyHaircuts(BigDecimal initSumm, List<HaircutOrder> orderList) {
-        INIT_SUMM = initSumm;
+    public AllDailyHaircuts(List<HaircutOrder> orderList) {
         this.orderList = orderList;
     }
 
-    @Override
-    public BigDecimal calcDailyPrice(BigDecimal counter) {
-        return null;
+    public List<HaircutOrder> getSortedList(){
+        Collections.sort(orderList);
+        return this.orderList;
     }
 
-
+    @Override
+    public BigDecimal calcDailyPrice() {
+        resultSum = BigDecimal.ZERO;
+        for (HaircutOrder haircutOrder : this.orderList){
+            resultSum = resultSum.add(haircutOrder.getPrice());
+        }
+        return resultSum;
+    }
 
     @Override
     public String toString() {
         return "DailyOrderList{" +
-                "INIT_SUMM=" + INIT_SUMM +
                 ", orderList=" + orderList +
                 '}';
-    }
-
-    public static void main(String[] args) {
-        User user = new User(25, "Smith", "Mike");
-        HaircutOrder haircutOrder = new ClassicHaircut(BigDecimal.valueOf(1.4), BigDecimal.valueOf(1500), user, 2, BigDecimal.valueOf(0.2));
-        ArrayList<HaircutOrder> tempList = new ArrayList<>();
-        //AllDailyHaircuts allDailyHaircuts = new AllDailyHaircuts();
-
     }
 }

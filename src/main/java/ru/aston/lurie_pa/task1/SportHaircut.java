@@ -11,12 +11,7 @@ public class SportHaircut extends HaircutOrder {
     }
 
     @Override
-    public BigDecimal getPrice(){
-        return super.getPrice().multiply(getMultiplyingFactor());
-    }
-
-    @Override
     public BigDecimal getMultiplyingFactor() {
-        return KOF;
+        return super.getMultiplyingFactor().multiply(KOF);
     }
 }

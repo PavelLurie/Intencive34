@@ -2,7 +2,7 @@ package ru.aston.lurie_pa.task1;
 
 import java.math.BigDecimal;
 
-public abstract class HaircutOrder implements MultiplyingFactor {
+public abstract class HaircutOrder implements MultiplyingFactor, Comparable<HaircutOrder>{
     private BigDecimal multiplyingFactor;
     private BigDecimal price;
     private User user;
@@ -28,7 +28,7 @@ public abstract class HaircutOrder implements MultiplyingFactor {
     }
 
     public BigDecimal getPrice() {
-        return getPrice().multiply(getMultiplyingFactor());
+        return this.price.multiply(getMultiplyingFactor());
     }
 
     public void setPrice(BigDecimal price) {
@@ -51,7 +51,18 @@ public abstract class HaircutOrder implements MultiplyingFactor {
         this.id = id;
     }
 
-    public BigDecimal getHaircutPrice(){
-        return null;
+    @Override
+    public String toString() {
+        return "HaircutOrder{" +
+                "multiplyingFactor=" + multiplyingFactor +
+                ", price=" + price +
+                ", user=" + user +
+                ", id=" + id +
+                '}';
+    }
+
+    @Override
+    public int compareTo(HaircutOrder haircutOrder) {
+        return user.getSourName().compareTo(haircutOrder.user.getSourName());
     }
 }
