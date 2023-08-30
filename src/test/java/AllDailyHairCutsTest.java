@@ -13,8 +13,8 @@ public class AllDailyHairCutsTest {
         User user = new User(54, "Smith", "Mike");
         User user1 = new User(23, "Doe", "John");
 
-        HaircutOrder haircutOrder = new ClassicHaircut(BigDecimal.valueOf(1.5), BigDecimal.valueOf(1500), user, 1, BigDecimal.valueOf(0.2));
-        HaircutOrder haircutOrder1 = new SportHaircut(BigDecimal.valueOf(1.5), BigDecimal.valueOf(1500), user1, 2, BigDecimal.valueOf(0.7));
+        HaircutOrder haircutOrder = new ClassicHaircut(new BigDecimal("1.5"), new BigDecimal(1500), user, 1, new BigDecimal("0.2"), HairLength.SHORT_HAIR);
+        HaircutOrder haircutOrder1 = new SportHaircut(new BigDecimal("1.5"), new BigDecimal(1500), user1, 2, new BigDecimal("0.7"));
         List<HaircutOrder> list = new ArrayList<>();
         list.add(haircutOrder);
         list.add(haircutOrder1);
@@ -29,8 +29,8 @@ public class AllDailyHairCutsTest {
         User user = new User(54, "Smith", "Mike");
         User user1 = new User(23, "Doe", "John");
 
-        HaircutOrder haircutOrder = new ClassicHaircut(BigDecimal.valueOf(1.5), BigDecimal.valueOf(1500), user, 1, BigDecimal.valueOf(0.2));
-        HaircutOrder haircutOrder1 = new SportHaircut(BigDecimal.valueOf(1.5), BigDecimal.valueOf(1500), user1, 2, BigDecimal.valueOf(0.7));
+        HaircutOrder haircutOrder = new ClassicHaircut(new BigDecimal("1.5"), new BigDecimal(1500), user, 1, new BigDecimal("0.2"), HairLength.SHORT_HAIR);
+        HaircutOrder haircutOrder1 = new SportHaircut(new BigDecimal("1.5"), new BigDecimal(1500), user1, 2, new BigDecimal("0.7"));
         List<HaircutOrder> list = new ArrayList<>();
         list.add(haircutOrder);
         list.add(haircutOrder1);
