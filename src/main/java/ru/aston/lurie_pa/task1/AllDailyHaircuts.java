@@ -2,8 +2,9 @@ package ru.aston.lurie_pa.task1;
 
 
 
+import ru.aston.lurie_pa.task2.SomeException;
+
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -24,7 +25,11 @@ public class AllDailyHaircuts implements OrderCalculation{
     public BigDecimal calcDailyPrice() {
         resultSum = BigDecimal.ZERO;
         for (HaircutOrder haircutOrder : this.orderList){
-            resultSum = resultSum.add(haircutOrder.getPrice());
+            try {
+                resultSum = resultSum.add(haircutOrder.getPrice());
+            } catch (SomeException e) {
+                throw new RuntimeException(e);
+            }
         }
         return resultSum;
     }

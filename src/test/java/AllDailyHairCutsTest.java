@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import ru.aston.lurie_pa.task1.*;
+import ru.aston.lurie_pa.task2.SomeException;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -9,7 +10,7 @@ import java.util.List;
 public class AllDailyHairCutsTest {
 
     @Test
-    void calcDailyPriceTest(){
+    void calcDailyPriceTest() throws SomeException {
         User user = new User(54, "Smith", "Mike");
         User user1 = new User(23, "Doe", "John");
 
@@ -25,7 +26,7 @@ public class AllDailyHairCutsTest {
     }
 
     @Test
-    void getSortedListTest(){
+    void getSortedListTest() throws SomeException {
         User user = new User(54, "Smith", "Mike");
         User user1 = new User(23, "Doe", "John");
 
