@@ -11,7 +11,7 @@ public class ClassicHaircut extends HaircutOrder{
     public ClassicHaircut(){
     }
 
-    public ClassicHaircut(BigDecimal multiplyingFactor, BigDecimal price, User user, int id, BigDecimal coefficient, HairLength hairLength) throws PriceAboveZeroException {
+    public ClassicHaircut(BigDecimal multiplyingFactor, BigDecimal price, User user, int id, BigDecimal coefficient, HairLength hairLength) {
         super(multiplyingFactor, price, user, id);
         this.coefficient = coefficient;
         this.hairLength = hairLength;

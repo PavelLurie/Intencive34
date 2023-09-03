@@ -1,13 +1,14 @@
 package ru.aston.lurie_pa.task2;
 
 public class PriceAboveZeroException extends Exception{
-    /**
-     Code 1 ошибка - нулевая цена.
-     */
-    private int code;
 
-    public PriceAboveZeroException(String message, int code) {
+    private final CodeError codeError;
+    public PriceAboveZeroException(String message, CodeError codeError) {
         super(message);
-        this.code = code;
+        this.codeError = codeError;
+    }
+
+    public CodeError getCodeError() {
+        return codeError;
     }
 }

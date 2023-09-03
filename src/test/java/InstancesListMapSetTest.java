@@ -34,8 +34,8 @@ public class InstancesListMapSetTest {
 
         Assertions.assertAll(
                 () -> Assertions.assertNotNull(testList),
-                () -> Assertions.assertEquals(1, element),
-                () -> Assertions.assertEquals(1, sizeList),
+                () -> Assertions.assertEquals(5, element),
+                () -> Assertions.assertEquals(3, sizeList),
                 () -> Assertions.assertFalse(empty)
         );
     }
