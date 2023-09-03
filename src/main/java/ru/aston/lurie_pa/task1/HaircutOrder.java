@@ -1,5 +1,8 @@
 package ru.aston.lurie_pa.task1;
 
+import ru.aston.lurie_pa.task2.CodeError;
+import ru.aston.lurie_pa.task2.PriceAboveZeroException;
+
 import java.math.BigDecimal;
 
 public abstract class HaircutOrder implements MultiplyingFactor, Comparable<HaircutOrder>{
@@ -27,12 +30,17 @@ public abstract class HaircutOrder implements MultiplyingFactor, Comparable<Hair
         this.multiplyingFactor = multiplyingFactor;
     }
 
-    public BigDecimal getPrice() {
+
+    public BigDecimal getPrice()  {
         return this.price.multiply(getMultiplyingFactor());
     }
 
-    public void setPrice(BigDecimal price) {
-        this.price = price;
+    public void setPrice(BigDecimal price) throws PriceAboveZeroException {
+        if (price.compareTo(new BigDecimal(0)) <= 0){
+           throw new PriceAboveZeroException("Цена не может быть меньше или равна нулю. Код ошибки: " + CodeError.CODE_PRICE_ERROR.getCodeError(), CodeError.CODE_PRICE_ERROR);
+        } else {
+            this.price = price;
+        }
     }
 
     public User getUser() {

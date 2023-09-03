@@ -2,8 +2,9 @@ package ru.aston.lurie_pa.task1;
 
 
 
+import ru.aston.lurie_pa.task2.PriceAboveZeroException;
+
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
