@@ -1,0 +1,2 @@
+CREATE TABLE Users (id SERIAL PRIMARY KEY, fio VARCHAR(250), phone VARCHAR(50), email VARCHAR(250), order_id BIGINT);
+
