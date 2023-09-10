@@ -1,0 +1,1 @@
+CREATE TABLE Orders (id SERIAL PRIMARY KEY, product_name VARCHAR(255), data_order VARCHAR(20) ,shipper_name VARCHAR(250));
