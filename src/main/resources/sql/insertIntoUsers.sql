@@ -1,0 +1,1 @@
+INSERT INTO Users(fio, phone, email, order_id) VALUES (?, ?, ?, ?);
