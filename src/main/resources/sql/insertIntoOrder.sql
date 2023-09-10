@@ -1,0 +1,1 @@
+INSERT INTO Orders(product_name, data_order, shipper_name) VALUES (?, ?, ?);
