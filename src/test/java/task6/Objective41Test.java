@@ -5,12 +5,14 @@ package task6;
 Объединить их в один стрим и вывести числа, которые кратны 5.
  */
 
-import java.util.Arrays;
+import org.junit.jupiter.api.Test;
+
 import java.util.function.Function;
 import java.util.stream.Stream;
 
-public class Objective41 {
-    public static void main(String[] args) {
+public class Objective41Test {
+    @Test
+    void ObjectiveTest() {
         Stream<Integer> stream = Stream.iterate(1, s -> s + 1)
                 .limit(10);
         Stream<Integer> stream1 = Stream.iterate(11, s -> s + 1)

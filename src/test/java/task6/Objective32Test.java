@@ -1,5 +1,7 @@
 package task6;
 
+import org.junit.jupiter.api.Test;
+
 import java.util.stream.Stream;
 
 /*
@@ -7,8 +9,10 @@ import java.util.stream.Stream;
 Создайте два Stream-а: один из массива чисел 1…5, второй из массива 5…10.
 Объедините эти два Stream-а в один и выведите на экран.
  */
-public class Objective32 {
-    public static void main(String[] args) {
+public class Objective32Test {
+
+    @Test
+    void ObjectiveTest() {
         Stream<Integer> stream1 = Stream.iterate(1, s -> s + 1)
                 .limit(5);
         Stream<Integer> stream2 = Stream.iterate(6, s -> s + 1)

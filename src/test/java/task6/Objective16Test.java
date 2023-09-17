@@ -4,11 +4,14 @@ package task6;
 Выведите на экран строки, которые начинаются с заданной подстроки.
  */
 
+import org.junit.jupiter.api.Test;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Objective16 {
-    public static void main(String[] args) {
+public class Objective16Test {
+    @Test
+    void ObjectiveTest() {
         String givenSubstring = "электр";
 
         List<String> stringList = new ArrayList<>();

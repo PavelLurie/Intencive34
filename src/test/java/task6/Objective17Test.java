@@ -1,5 +1,7 @@
 package task6;
 
+import org.junit.jupiter.api.Test;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,8 +9,10 @@ import java.util.List;
 Задача №17
 Выведите все числа в списке, которые не кратны 2.
  */
-public class Objective17 {
-    public static void main(String[] args) {
+public class Objective17Test {
+
+    @Test
+    void ObjectiveTest(){
         List<Integer> arrayList = new ArrayList<>();
 
         arrayList.add(2);
