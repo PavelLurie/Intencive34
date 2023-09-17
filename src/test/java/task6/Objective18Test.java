@@ -5,11 +5,14 @@ package task6;
 например, выведите все записи из базы данных, у которых значение поля равно 1.
  */
 
+import org.junit.jupiter.api.Test;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class Objective18 {
-    public static void main(String[] args) {
+public class Objective18Test {
+    @Test
+    void ObjectiveTest() {
         String generalCity = "Moscow";
         List<User> users = new ArrayList<>();
 

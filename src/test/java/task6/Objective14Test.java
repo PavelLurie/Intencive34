@@ -1,14 +1,19 @@
 package task6;
 
+import org.junit.jupiter.api.Test;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /*
-Задача №15
-Отфильтруйте все элементы списка, которые меньше 0.
- */
-public class Objective15 {
-    public static void main(String[] args) {
+  Задача №14
+  Выведите на экран только те элементы списка, которые больше заданного числа.
+   */
+public class Objective14Test {
+
+    @Test
+    void ObjectiveTest()  {
+        int givenNumber = 10;
         List<Integer> arrayList = new ArrayList<>();
 
         arrayList.add(2);
@@ -19,7 +24,7 @@ public class Objective15 {
         arrayList.add(17);
 
         List<Integer> arrayList1 = arrayList.stream()
-                .filter(a -> a < 0)
+                .filter(a -> a > givenNumber)
                 .toList();
 
         arrayList1.forEach(System.out::println);
