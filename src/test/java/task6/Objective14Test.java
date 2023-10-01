@@ -11,10 +11,6 @@ import java.util.List;
    */
 public class Objective14Test {
 
-    @Test
-    void ObjectiveTest() {
-        int givenNumber = 10;
-        List<Integer> arrayList = new ArrayList<>();
 
         arrayList.add(2);
         arrayList.add(-5);
