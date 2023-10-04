@@ -10,8 +10,7 @@ import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Objective18Test {
-    @Test
+
     void ObjectiveTest() {
         String generalCity = "Moscow";
         List<User> users = new ArrayList<>();
@@ -39,24 +38,3 @@ public class Objective18Test {
         users1.forEach(System.out::println);
 
     }
-    public static class User{
-        private int id;
-        private String name;
-        private String city;
-
-        public User(int id, String name, String city) {
-            this.id = id;
-            this.name = name;
-            this.city = city;
-        }
-
-        @Override
-        public String toString() {
-            return "User{" +
-                    "id=" + id +
-                    ", name='" + name + '\'' +
-                    ", city='" + city + '\'' +
-                    '}';
-        }
-    }
-}
