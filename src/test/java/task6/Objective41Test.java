@@ -10,7 +10,6 @@ import org.junit.jupiter.api.Test;
 import java.util.function.Function;
 import java.util.stream.Stream;
 
-public class Objective41Test {
 
     @Test
     void ObjectiveTest() {

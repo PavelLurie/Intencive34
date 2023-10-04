@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 Создайте два Stream-а: один из массива чисел 1…5, второй из массива 5…10.
 Объедините эти два Stream-а в один и выведите на экран.
  */
-public class Objective32Test {
+
     @Test
     void ObjectiveTest() {
         Stream<Integer> stream1 = Stream.iterate(1, s -> s + 1)
