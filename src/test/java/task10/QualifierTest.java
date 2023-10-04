@@ -8,7 +8,7 @@ import ru.aston.lurie_pa.task10.qualifier.Bird;
 import ru.aston.lurie_pa.task10.qualifier.SpringConfigQualifier;
 
 public class QualifierTest {
-    private static final Logger log = LoggerFactory.getLogger(ConfigurationViaXMLTest.class);
+    private static final Logger log = LoggerFactory.getLogger(QualifierTest.class);
     private static final AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfigQualifier.class);
 
     @Test
